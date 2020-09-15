@@ -96,7 +96,7 @@ header {
   align-items: center; }
   .episodios__titulo {
     font-family: 'IBM Plex Sans', monospace;
-    margin-left: 200px;
+    margin-left: 10vw;
     border: 2px solid violet;
     font-weight: normal;
     font-size: 48px;
