@@ -6,7 +6,7 @@
 header{
     margin-top: 1%;
     display: flex;
-    width: 100vw;
+    width: 99vw;
     height: 2%;
 
     & .logo{
@@ -16,6 +16,7 @@ header{
         margin-left: 10vw;
     }
     & .nav{
+        
         width: 100%;
         margin-right: 10vw;
         display: flex; 
@@ -101,9 +102,9 @@ header{
     }
 }
 .episodios{
-    border: 2px solid red;
-    background: linear-gradient(90deg, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 100%);
-    height: 100vh;
+    background: linear-gradient(90deg, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 100%); 
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+    height: 125vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -111,23 +112,57 @@ header{
 
     &__titulo{
         font-family: 'IBM Plex Sans', monospace;
-        margin-left: 10vw;
-        border: 2px solid violet;
+        margin-left: 20vw;
         font-weight: normal;
         font-size: 48px;
-        color: #FFFFFF;
-        display: flex;
+        color: white;
         align-self: flex-start;
         text-transform: capitalize;
         letter-spacing: 0;        
     }
     & .iframes{
-        border: 2px solid green;
-        height: 80%;
-        width: 90%;
+        height: 60%;
+        width: 80%;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
     }
+}
+.donde{
+    display: flex;
+        .dondecontainer{
+            width: 80vw;
+            height: 50vh;
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row nowrap;
+            .dondetexto{
+                p{
+                    font-family: 'IBM Plex Mono', monospace; 
+                    font-size: 16px;
+                    color: #060A24;
+                    letter-spacing: 0;
+                    line-height: 24px;
+                    width: 23vw;
+                }      
+                h2{
+                    font-family: 'IBM Plex Sans', monospace;
+                    font-weight: 400;
+                    font-size: 48px;
+                    color: #060A24;
+                    letter-spacing: 0;
+                }
+            }
+            .dondeimagen {
+                width: 20vw;
+                img{
+                    position: absolute;  
+                    margin-left: 200px; 
+                    margin-top: -200px;     
+                    width: 400px;
+                    height: 700px;
+                }
+            }
+        }
 }
