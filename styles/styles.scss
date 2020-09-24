@@ -8,7 +8,6 @@ header{
     display: flex;
     width: 99vw;
     height: 2%;
-
     & .logo{
         display: flex;
         justify-content: center;
@@ -16,7 +15,6 @@ header{
         margin-left: 10vw;
     }
     & .nav{
-        
         width: 100%;
         margin-right: 10vw;
         display: flex; 
@@ -37,7 +35,22 @@ header{
                 text-transform: uppercase;
                 letter-spacing: 0;
                 line-height: 28px;
-                display: flex;
+                    &:hover{
+                        font-family: 'IBM Plex Mono - Medium', monospace;
+                        font-size: 16px;
+                        text-decoration: line-through;
+                        color: #00F3BB;
+                        letter-spacing: 0;
+                        line-height: 28px;
+                    }
+                    &:active{
+                        font-family: 'IBM Plex Mono', monospace;
+                        font-size: 16px;
+                        color: rgba(6,10,36,0.56);
+                        text-decoration: line-through;
+                        letter-spacing: 0;
+                        line-height: 28px;
+                    }
                 }
             }
     }
@@ -100,6 +113,9 @@ header{
         background-color: #00F3BB;
         align-items: center;
         justify-content: center;
+        &:hover{
+            background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        }
     }
 }
 .episodios{
@@ -122,7 +138,6 @@ header{
         letter-spacing: 0;        
     }
      .iframes{
-        border: 1px solid black;
         width: 80vw;
         height: 60vh;
         display: flex;
@@ -237,6 +252,47 @@ header{
             color: #060A24;
             letter-spacing: 0;
             text-align: center;
+        }
+    }
+}
+.novedades{
+        display: flex;
+        background: linear-gradient(90deg, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 100%); 
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+        height: 520px;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100vw;
+    &__container {
+        width: 80vw;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        &__title{
+            font-family: 'IBM Plex Sans', monospace;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-size: 48px;
+            letter-spacing: 0;
+            margin-bottom: 70px;
+        }
+        &__boton{
+            text-align: center;
+            display: flex;
+            width: 345px;
+            height: 56px;
+            font-family: 'IBM Plex Mono - Medium', monospace;
+            font-size: 18px;
+            color: #060A24;
+            text-transform: uppercase;
+            background-color: #00F3BB;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+            }
         }
     }
 }
