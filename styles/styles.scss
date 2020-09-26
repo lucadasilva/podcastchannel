@@ -4,10 +4,10 @@
 }
 
 header{
-    margin-top: 1%;
+    margin-top: 10px;
     display: flex;
     width: 99vw;
-    height: 2%;
+    height: 5vh ;
     & .logo{
         display: flex;
         justify-content: center;
@@ -20,12 +20,12 @@ header{
         display: flex; 
         justify-content: flex-end;
         align-items: center;
-            & ul {
+            & .nav__list {
             display: flex;
             list-style: none;
             width: 40%;
             justify-content: space-between;
-                & li{
+                & .nav__link{
                 font-family: 'IBM Plex Mono', monospace;
                 font-size: 16px;
                 color: #060A24;
@@ -35,6 +35,7 @@ header{
                 text-transform: uppercase;
                 letter-spacing: 0;
                 line-height: 28px;
+                text-decoration: none;
                     &:hover{
                         cursor: pointer;
                         font-family: 'IBM Plex Mono - Medium', monospace;
@@ -116,6 +117,7 @@ header{
         justify-content: center;
         &:hover{
             background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+            cursor: pointer;
         }
     }
 }
@@ -131,6 +133,7 @@ header{
     .episodios__titulo{
         font-family: 'IBM Plex Sans', monospace;
         margin-left: 15vw;
+        margin-bottom: 20px;
         font-weight: normal;
         font-size: 48px;
         color: white;
@@ -145,9 +148,9 @@ header{
         flex-flow: row wrap;
         justify-content: space-around;
         align-items: center;
-        img{
+        iframe{
             width: 35vw;
-            height: 25vh;
+            height: 230px;
         }
     }
 }
@@ -293,7 +296,46 @@ header{
             justify-content: center;
             &:hover{
                 background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+                cursor: pointer;
             }
+        }
+    }
+}
+footer{
+    display: flex;
+    justify-content: center;
+    .footer__container{
+        display: flex;
+        align-items: center;
+        height: 10vh;
+        width: 80vw;
+        justify-content: space-between;
+        &__text{
+            width: 30vw;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 16px;
+            color: #060A24;
+            letter-spacing: 0;
+            line-height: 28px;
+        }
+        &__icons{
+            width: 20vw;
+            height: 40px;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-around;
+                .brand{
+                    display: flex;
+                    width: 40px;
+                    height: 40px;
+                    align-items: center;
+                    justify-content: center;
+                    color: black;
+                    a{
+                        color: black;
+                    }
+                    
+                }
         }
     }
 }
