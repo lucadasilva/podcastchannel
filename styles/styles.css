@@ -179,7 +179,7 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
     height: 56px;
     font-family: 'IBM Plex Mono - Medium', monospace;
     font-weight: 600;
-    font-size: 16x;
+    font-size: 16px;
     line-height: 22px;
     color: #060A24;
     text-transform: uppercase;
