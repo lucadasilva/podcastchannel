@@ -1,10 +1,8 @@
 @import "__variables.scss";
-
 *{
     margin: 0;
     padding: 0;
 }
-
 header {
     display: flex;
     justify-content: space-between;
@@ -16,133 +14,125 @@ header {
         height: 24px;
         width: 24px;
     }
-    .menu{
-        margin-right: 16px;
-    }
-}
-
-
-header nav .menu ul {
-    width: 100vw;
-    position: absolute;
-    right: 0;
-    overflow: hidden;
-    list-style: none;
-    background: #0000EC;
-    height: 0px;
-    transition: height 0.5s ease;
-    margin-top: 10px;
-}
-header nav .menu  ul li {
-    position: relative;
-    margin-left: 16px;
-    & :first-child{
-        margin-top: 16px;
-        &:hover{
-            color: #fff;
-            font-family: 'IBM Plex Mono-Medium', monospace;
-            font-size: 16px;
-            font-weight: 500;
-            color: #00F3BB;
-            letter-spacing: 0;
-            line-height: 28px;
-        }
-        &:active{
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 16px;
-            color: rgba(6,10,36,0.56);
-            text-decoration: line-through;
-            font-weight: 500;
-            letter-spacing: 0;
-            line-height: 28px;
-        }
-    }
-} 
-header nav .menu ul li a {
-    position: relative;
-    text-decoration: none;
-    color: white;
-    line-height: 28px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 500;
-    font-size: 16px;
-    color: #FFFFFF;
-    letter-spacing: 0;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-    display: block;
-}
-header nav .menu  ul li a:hover {
-    color: #fff;
-    font-family: 'IBM Plex Mono-Medium', monospace;
-    font-weight: 500;
-    font-size: 16px;
-    color: #00F3BB;
-    letter-spacing: 0;
-    line-height: 28px;
-} 
-header nav .menu  ul li a:active{
-                        font-family: 'IBM Plex Mono', monospace;
-                        font-size: 16px;
-                        font-weight: 500;
-                        color: rgba(6,10,36,0.56);
-                        text-decoration: line-through;
-                        letter-spacing: 0;
+    nav{
+        .menu{
+            padding-top: 3px;
+            margin-right: 16px;
+            ul{
+                width: 100vw;
+                position: absolute;
+                right: 0;
+                overflow: hidden;
+                list-style: none;
+                background: #0000EC;
+                height: 0px;
+                transition: height 0.5s ease;
+                margin-top: 10px;
+                li{
+                    position: relative;
+                    margin-left: 16px;
+                    & :first-child{
+                        margin-top: 16px;
+                        &:hover{
+                            color: #fff;
+                            font-family: 'IBM Plex Mono-Medium', monospace;
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: #00F3BB;
+                            letter-spacing: 0;
+                            line-height: 28px;
+                        }
+                        &:active{
+                            font-family: 'IBM Plex Mono', monospace;
+                            font-size: 16px;
+                            color: rgba(6,10,36,0.56);
+                            text-decoration: line-through;
+                            font-weight: 500;
+                            letter-spacing: 0;
+                            line-height: 28px;
+                        }
+                    }
+                    a{
+                        position: relative;
+                        text-decoration: none;
+                        color: white;
                         line-height: 28px;
+                        font-family: 'IBM Plex Mono', monospace;
+                        font-weight: 500;
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        letter-spacing: 0;
+                        text-transform: uppercase;
+                        margin-bottom: 24px;
+                        display: block;  
+                        &:hover{
+                            color: #fff;
+                            font-family: 'IBM Plex Mono-Medium', monospace;
+                            font-weight: 500;
+                            font-size: 16px;
+                            color: #00F3BB;
+                            letter-spacing: 0;
+                            line-height: 28px;
+                        }
+                        &:active{
+                            font-family: 'IBM Plex Mono', monospace;
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: rgba(6,10,36,0.56);
+                            text-decoration: line-through;
+                            letter-spacing: 0;
+                            line-height: 28px;
+                        }  
+                    }
+                }
+            }
+            input {
+                display: block;
+                width: 40px;
+                height: 32px;
+                opacity: 0;
+                z-index: 2;
+                position: absolute;
+                &:checked ~ ul {
+                    height: 224px;
+                    transition: height 0.5s ease-in-out;
+                    -moz-transition: height 0.5s ease-in-out;
+                    -o-transition: height 0.5s ease-in-out;
+                    -webkit-transition: height 0.5s ease-in-out;
+                } 
+            }
+            span {
+                display: block;
+                width: 25px;
+                height: 2.5px;
+                margin-bottom: 6.5px;
+                position: relative;
+                background: #000;
+                z-index: 1;
+                transform-origin: 3px 0px;
+                transition: transform 0.5s ease,
+                opacity 0.55s ease;
+                &:first-child {
+                    transform-origin: 0% 0%;
+                }
+                &:nth-last-child(2) {
+                    transform-origin: 0% 100%;
+                }
+            } 
+            input:checked ~ span {
+                opacity: 1;
+                transform: rotate(45deg) translate(2px, 1px);
+            }
+            input:checked ~ span:nth-last-child(3) {
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+            }
+            input:checked ~ span:nth-last-child(2) {
+                transform: rotate(-45deg) translate(1px, 0px);
+            }   
+        }
+    }
 }
-/*animación del menu que se desplega*/
-header nav .menu input[type="checkbox"]:checked ~ ul {
-    height: 224px;
-    transition: height 0.5s ease-in-out;
-    -moz-transition: height 0.5s ease-in-out;
-    -o-transition: height 0.5s ease-in-out;
-    -webkit-transition: height 0.5s ease-in-out;
-}
-header nav .menu {
-    padding-top: 3px;
-}
-/*checkbox transparente y en primer plano*/
-header nav .menu input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    opacity: 0;
-    z-index: 2;
-    position: absolute;
-}
-/*span -lineas del menu hamburguesa-*/
-header nav .menu span {
-    display: block;
-    width: 25px;
-    height: 2.5px;
-    margin-bottom: 6.5px;
-    position: relative;
-    background: #000;
-    z-index: 1;
-    transform-origin: 3px 0px;
-    transition: transform 0.5s ease,
-        opacity 0.55s ease;
-}
-header nav .menu span:first-child {
-    transform-origin: 0% 0%;
-}
-header nav .menu span:nth-last-child(2) {
-    transform-origin: 0% 100%;
-}
-/*movimiento a cruz*/
-header nav .menu input:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg) translate(2px, 1px);
-}
-header nav .menu input:checked ~ span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-}
-header nav .menu input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(1px, 0px);
-}
-
-    
 .bienvenida{
     display: flex;
     flex-flow: row wrap;
@@ -184,34 +174,34 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
             line-height: 22px;
         }       
     }
-}
-.containerBoton {
-    display: flex;
-    justify-content: center;
-    margin-top: 35px;
-    margin-bottom: 24px;
-    & .bienvenida__boton{
+    .containerBoton {
         display: flex;
-        width: 90vw;
-        height: 56px;
-        font-family: 'IBM Plex Mono - Medium', monospace;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 22px;
-        color: #060A24;
-        text-transform: uppercase;
-        background-color: #00F3BB;
-        align-items: center;
         justify-content: center;
-        &:hover{
-            background-image: $btngradient;
-            cursor: pointer;
-            color: #FFFFFF;
+        margin-top: 35px;
+        margin-bottom: 24px;
+        & .bienvenida__boton{
+            display: flex;
+            width: 90vw;
+            height: 56px;
+            font-family: 'IBM Plex Mono - Medium', monospace;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            color: #060A24;
+            text-transform: uppercase;
+            background-color: #00F3BB;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                background-image: $btngradient;
+                cursor: pointer;
+                color: #FFFFFF;
+            }
         }
     }
 }
 .episodios{
-    background: linear-gradient(90deg, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 100%);
+    background: $backgradient;
     clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
     display: flex;
     flex-flow: row wrap;  
@@ -236,6 +226,7 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
          
         div{
             width: 95vw;
+            margin-bottom: 10px;
         }
     }
 }
@@ -255,19 +246,11 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
             height: 520px;      
             margin-bottom: 25px;
             .phone{
-                width: 360px;
-                height: 520px;
+                width: 320px;
+                height: 500px;
             }
         }
         .dondetexto{
-            p{
-                font-family: 'IBM Plex Mono', monospace; 
-                font-weight: 500;
-                font-size: 14px;
-                color: #060A24;
-                letter-spacing: 0;
-                line-height: 22px;
-            } 
             h2{
                 font-family: 'IBM Plex Sans', monospace;
                 font-weight: 400;
@@ -277,6 +260,15 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
                 margin-bottom: 8px ;
                 line-height: 42px;
             }
+            p{
+                font-family: 'IBM Plex Mono', monospace; 
+                font-weight: 500;
+                font-size: 14px;
+                color: #060A24;
+                letter-spacing: 0;
+                line-height: 22px;
+            } 
+            
         }
     }
 }
@@ -292,7 +284,7 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
         color: #060A24;
         letter-spacing: 0;
         line-height: 42px;
-        margin-bottom: 36px;
+        margin-bottom: 14px;
     }
     .invitados-grid{
         font-size: 0;
@@ -306,7 +298,6 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
         }
     }
 }
-
 .subjects{
     display: flex;
     align-items: center;
@@ -323,20 +314,17 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
         line-height: 42px;
         margin-bottom: 25px;
     }
-
     &__container {
         width: 320px;
         display: flex;
         justify-content: center;
         flex-flow: row wrap;
     }
-
     &__list {
         display: flex;
         justify-content: center;
         flex-flow: row wrap;
     }
-
     &__item {
         display: flex;
         flex-flow: row wrap;
@@ -357,7 +345,7 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
 }
 .novedades{
     display: flex;
-    background: linear-gradient(90deg, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 100%); 
+    background: $backgradient;
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
     height: 340px;
     align-items: flex-end;
@@ -447,11 +435,8 @@ footer{
         }
     }
 }
-
-
 @media screen and (min-width: 321px){
     body{
-        
         header{
             margin-top: 10px;
             display: flex;
@@ -473,7 +458,7 @@ footer{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 550px;
+                    width: 500px;
                     margin-right: 100px;
                     & #checkbox{
                         display: none;
@@ -484,14 +469,14 @@ footer{
                     & ul {
                         width: 100%;
                         display: flex;
-                        justify-content: space-around;
+                        justify-content: space-between;
                         align-items: center;
                         flex-flow: row;
                         position: unset;
                         right: unset;
                         overflow: unset;
                         list-style: none;
-                        height: 90%;
+                        height: 100%;
                         margin-top: unset;
                         transition: unset;
                         background: white;
@@ -547,7 +532,6 @@ footer{
             display: flex;
             align-items: flex-end;
             width: 100vw;
-            
             &__content{
                 display: flex;
                 flex-flow: row wrap;
@@ -598,7 +582,7 @@ footer{
                 display: flex;
                 height: 60px;
                 margin-left: 200px;
-                margin-bottom: 0;
+                margin-bottom: 26px;
                 margin-top: 185px;
                 align-items: center;
                 font-size: 48px;
@@ -615,9 +599,13 @@ footer{
                 div {
                     display: flex;
                     justify-content: space-around;
+                    height: 300px;
                     width: 40%;
+                    iframe{
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
-            
             }
         }
         .donde{
@@ -634,7 +622,7 @@ footer{
                 flex-flow: row nowrap;
                 .dondetexto{
                     width: 50%;
-                    margin-top: 20px;
+                    margin-top: 70px;
                     p{
                         font-size: 16px;
                         width: 65%;
@@ -650,7 +638,7 @@ footer{
                     .phone{
                         position: absolute;  
                         margin-left: 200px; 
-                        margin-top: -20vh;     
+                        margin-top: -15vh;    
                         width: 400px;
                         height: 650px;
                     }
@@ -658,9 +646,11 @@ footer{
             }
         }
         .invitados{
+            margin-top: 64px;
             h2{
                 font-size: 48px;
                 width: 1040px;
+                margin-bottom: 36px;
             }
             .invitados-grid{
                 img{
@@ -747,6 +737,3 @@ footer{
         }
     }
 }
-
-
-
