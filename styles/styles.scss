@@ -1,4 +1,3 @@
-@import "__variables.scss";
 *{
     margin: 0;
     padding: 0;
@@ -196,7 +195,7 @@ header {
             align-items: center;
             justify-content: center;
             &:hover{
-                background-image: $btngradient;
+                background-image: linear-gradient(270deg, #0000FE 0%, #00F0B8 100%);
                 cursor: pointer;
                 color: #FFFFFF;
             }
@@ -204,7 +203,7 @@ header {
     }
 }
 .episodios{
-    background: $backgradient;
+    background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
     clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
     display: flex;
     flex-flow: row wrap;  
@@ -346,7 +345,7 @@ header {
 }
 .novedades{
     display: flex;
-    background: $backgradient;
+    background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
     height: 340px;
     align-items: flex-end;
@@ -383,7 +382,7 @@ header {
             align-items: center;
             justify-content: center;
             &:hover{
-                background-image: $btngradient;
+                background-image: linear-gradient(270deg, #0000FE 0%, #00F0B8 100%);
                 cursor: pointer;
                 color: #FFFFFF;
             }
