@@ -162,7 +162,7 @@ header {
         font-size: 36px;
         line-height: 42px;
         letter-spacing: 0; }
-    .bienvenida__content p {
+    .bienvenida__content .textomobile {
       width: 288px;
       margin-top: 16px;
       font-family: 'IBM Plex Mono', monospace;
@@ -171,6 +171,8 @@ header {
       color: #060A24;
       letter-spacing: 0;
       line-height: 22px; }
+    .bienvenida__content .textodesktop {
+      display: none; }
   .bienvenida .containerBoton {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -664,11 +666,24 @@ footer {
           font-size: 64px; }
         body .bienvenida__content .titulo .azul {
           font-size: 64px; }
-      body .bienvenida__content p {
+      body .bienvenida__content .textomobile {
+        display: none;
         margin-top: unset;
         height: 25%;
         width: 60%;
         font-size: 16px; }
+      body .bienvenida__content .textodesktop {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: unset;
+        width: 60%;
+        font-size: 16px;
+        font-family: 'IBM Plex Mono', sans-serif;
+        font-weight: 500;
+        color: #060A24;
+        letter-spacing: 0;
+        line-height: 24px; }
       body .bienvenida__content .containerBoton {
         display: -webkit-box;
         display: -ms-flexbox;
