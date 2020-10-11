@@ -795,7 +795,8 @@ footer {
           width: 400px;
           height: 650px; }
   body .invitados {
-    margin-top: 64px; }
+    margin-top: 64px;
+    width: 100vw; }
     body .invitados h2 {
       font-size: 48px;
       width: 1040px;
