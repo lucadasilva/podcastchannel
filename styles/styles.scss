@@ -136,6 +136,7 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    width: 100vw;
     &__content{
         flex-flow: column;
         width: 90vw;
@@ -155,7 +156,6 @@ header {
                 text-decoration: line-through;
             }
             & .azul{
-                color: #0000ec;
                 font-family: 'IBM Plex Sans', sans-serif;
                 font-size: 36px;
                 line-height: 42px;
@@ -208,6 +208,7 @@ header {
     display: flex;
     flex-flow: column nowrap;  
     align-items: center;
+    width: 100vw;
     &__titulo{
         font-family: 'IBM Plex Sans', monospace;
         font-weight: normal;
@@ -333,7 +334,6 @@ header {
         justify-content: center;
         text-align: center;
         margin-bottom: 50px;
-        
         &--text {
             width: 320px;
             font-family: 'IBM Plex Sans', monospace;
@@ -394,7 +394,7 @@ header {
 footer{
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     .footer__container{
         display: flex;
         align-items: center;
@@ -437,12 +437,6 @@ footer{
 @media screen and (min-width: 1440px){
     body{
         header{
-            margin-top: 10px;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
-            width: 100vw;
             height: 5vh;
             & .logo{
                 margin-left: 100px;
@@ -528,9 +522,7 @@ footer{
         }
         .bienvenida{
             height: 45vh;
-            display: flex;
             align-items: flex-end;
-            width: 100vw;
             &__content{
                 display: flex;
                 flex-flow: row wrap;
@@ -544,6 +536,7 @@ footer{
                         font-size: 64px;
                     }
                     & .azul{
+                        color: #0000ec;
                         font-size: 64px;
                     }
                 }
@@ -566,7 +559,6 @@ footer{
                     line-height: 24px;
                 }
                 .containerBoton {
-                    display: flex;
                     justify-content: flex-start;
                     margin-top: unset;
                     margin-bottom: unset;
@@ -585,9 +577,7 @@ footer{
         .episodios{
             clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
             height: 1042px;
-            display: flex;
             flex-flow: row wrap;
-            width: 100vw;
             &__titulo{
                 display: flex;
                 height: 60px;
@@ -601,8 +591,6 @@ footer{
             .iframes{
                 width: 100vw;
                 height: 80vh;
-                display: flex;
-                flex-flow: row wrap;
                 justify-content: space-around;
                 margin-bottom: 230px;
                 div {
@@ -618,30 +606,14 @@ footer{
             }
         }
         .donde{
-            display: flex;
             justify-content: unset;
             margin-top: 0;
             margin-bottom: unset;
             width: 100vw;
             display: flex;
             .dondecontainer{
-                display: flex;
                 justify-content: unset;
                 width: 100%;
-                flex-flow: row nowrap;
-                .dondetexto{
-                    width: 50%;
-                    margin-top: 70px;
-                    p{
-                        font-size: 16px;
-                        width: 65%;
-                    }      
-                    h2{
-                        font-weight: 400;
-                        font-size: 48px;
-                        margin-bottom: 3vh;
-                    }
-                }
                 .dondeimagen {
                     width: 50%;
                     .phone{
@@ -652,6 +624,21 @@ footer{
                         height: 650px;
                     }
                 }
+                .dondetexto{
+                    width: 50%;
+                    margin-top: 70px;
+                    h2{
+                        font-weight: 400;
+                        font-size: 48px;
+                        margin-bottom: 3vh;
+                    }
+                    p{
+                        font-size: 16px;
+                        width: 65%;
+                    }      
+                    
+                }
+                
             }
         }
         .invitados{
@@ -670,11 +657,7 @@ footer{
             }
         }
         .subjects{
-            display: flex;
-            align-items: center;
-            width: 100%;
             height: 50vh;
-            justify-content: center;
             &__title {
                 width: 100%;
                 font-size: 48px;
@@ -682,18 +665,15 @@ footer{
                 margin-left: 200px;
             }
             &__container {
-                width: 1440px;
+                width: 100vw;
             }
             &__list {
                 width: 70%;
-                display: flex;
                 flex-flow: row nowrap;
             }
             &__item {
                 width: 100%;
-                display: flex;
                 flex-flow: column;
-                text-align: center;
                 justify-content: flex-start;
                 align-items: center;
                 &--image {
@@ -707,7 +687,6 @@ footer{
             }
         }
         .novedades{
-                display: flex;
                 clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
                 height: 520px;
             &__container {
@@ -722,9 +701,6 @@ footer{
             }
         }
         footer{
-            display: flex;
-            justify-content: center;
-            width: 100vw;
             height: 80px;
             .footer__container{
                 width: 90vw;
