@@ -206,13 +206,14 @@ header {
     background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
     clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
     display: flex;
-    flex-flow: row wrap;  
+    flex-flow: column nowrap;  
+    align-items: center;
     &__titulo{
         font-family: 'IBM Plex Sans', monospace;
         font-weight: normal;
         margin-bottom: 20px;
         margin-top: 75px;
-        margin-left: 15px;
+        margin-left: -130px;
         font-size: 36px;
         color: #FFFFFF;
         line-height: 42px;
@@ -291,6 +292,7 @@ header {
         grid-template-columns: auto auto auto;
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
         margin-bottom: 50px;
         img{
             width: 320px;
@@ -301,7 +303,7 @@ header {
 .subjects{
     display: flex;
     align-items: center;
-    width: 320px;
+    width: 100%;
     flex-flow: row wrap;
     justify-content: center;
     &__title {
@@ -392,7 +394,7 @@ header {
 footer{
     display: flex;
     justify-content: center;
-    width: 320px;
+    width: 100%;
     .footer__container{
         display: flex;
         align-items: center;
@@ -432,7 +434,7 @@ footer{
         }
     }
 }
-@media screen and (min-width: 321px){
+@media screen and (min-width: 1440px){
     body{
         header{
             margin-top: 10px;

@@ -214,16 +214,19 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .episodios__titulo {
     font-family: 'IBM Plex Sans', monospace;
     font-weight: normal;
     margin-bottom: 20px;
     margin-top: 75px;
-    margin-left: 15px;
+    margin-left: -130px;
     font-size: 36px;
     color: #FFFFFF;
     line-height: 42px;
@@ -321,6 +324,9 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 50px; }
     .invitados .invitados-grid img {
       width: 320px;
@@ -333,7 +339,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 320px;
+  width: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -467,7 +473,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 320px; }
+  width: 100%; }
   footer .footer__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -524,7 +530,7 @@ footer {
         footer .footer__container__icons .brand a {
           color: black; }
 
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 1440px) {
   body header {
     margin-top: 10px;
     display: -webkit-box;
