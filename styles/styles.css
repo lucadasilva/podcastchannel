@@ -249,6 +249,11 @@ header {
     .episodios .iframes div {
       width: 95vw;
       margin-bottom: 10px; }
+      .episodios .iframes div iframe {
+        width: 100%;
+        height: 232px;
+        border: 0px;
+        background-color: transparent; }
 
 .donde {
   display: -webkit-box;
